@@ -1,0 +1,14 @@
+<template name="headlines">
+	<div class="container-fluid">
+		{{#each headlines}}
+			{{>headline}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="headline">
+	<div class="row">
+	  <div class="col-xs-10"><a href="{{ pathFor 'comments' }}"><p class="lead">{{text}} <span class="badge">{{countComment}}</span> </p></a></div>
+	  <div class="col-xs-2"><a href={{href}}>Article</a></div>
+	</div>
+</template>

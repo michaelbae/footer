@@ -1,0 +1,14 @@
+<template name="comments">
+	<div class="container-fluid">
+		{{#each comments}}
+			{{>comment}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="comment">
+	<blockquote>
+	  <p>{{comment}}</p>
+	  <footer>{{user}}   <cite title="Source Title">Up: {{upvote}} Down: {{downvote}}</cite></footer>
+	</blockquote>
+</template>
